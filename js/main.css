@@ -1,0 +1,7 @@
+/* Styles go here. */
+
+#mainCanvas {
+    width: 400px;
+    height: 400px;
+    border: solid 1px black;
+}
