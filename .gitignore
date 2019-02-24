@@ -10,3 +10,9 @@ node_modules
 # temporary files
 *.tmp
 *~
+
+# Ignore node dist
+dist/
+
+# Ignore browser dist
+public/dist/
