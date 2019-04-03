@@ -103,3 +103,35 @@ for(let color of rainbow()){
 }
 
 
+/* yield expression and two-way communication */
+function* interrogate(){
+    const name = yield "What is your name?";
+    const color = yield "What is your favorite color?";
+    return `${name}'s favorite color is ${color}`;
+}
+let it = interrogate();
+it.next();
+it.next('Ethan');
+it.next('orange');
+
+
+/* Generator and return */
+function* abc(){
+    yield 'a';
+    yield 'b';
+    return 'c';
+}
+const it = abc();
+it.next();
+it.next();
+it.next();
+
+// using for loop..of
+function* abc(){
+    yield 'a';
+    yield 'b';
+    return 'c';
+}
+for(let l of abc()){
+    console.log(l);
+}
