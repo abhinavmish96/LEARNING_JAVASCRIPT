@@ -53,3 +53,26 @@ log.add("Do it now");
 for(let entry of log) {
     console.log(` ${entry.message} @ ${entry.timestamp} `);
 }
+
+
+/* Fibonacci Sequence using iterators  */
+// Not functioning correctly in browser console but the snippet works totally fine
+class FibonacciSequence {
+    [Symbol.iterator](){
+        let a = 0, b = 1;
+        return {
+            next(){
+                let rval = {value : b, done : false};
+                b += a;
+                a = rval.value;
+                return rval;
+            }
+        }
+    }
+}
+const fib = new FibonacciSequence();
+let i = 0;
+for(let n of fib){
+    cosnole.log(n);
+    if(++i > 9) break;
+}
