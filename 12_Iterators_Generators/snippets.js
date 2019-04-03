@@ -30,6 +30,7 @@ class Log {
 
 
 /* logging class that attaches timpestamps to messages using iterator */
+// Not functioning correctly in browser console but the snippet works totally fine
 class Log {
     constructor(){
         this.messages = [];
@@ -57,6 +58,7 @@ for(let entry of log) {
 
 /* Fibonacci Sequence using iterators  */
 // Not functioning correctly in browser console but the snippet works totally fine
+// custom iterator
 class FibonacciSequence {
     [Symbol.iterator](){
         let a = 0, b = 1;
@@ -76,3 +78,28 @@ for(let n of fib){
     cosnole.log(n);
     if(++i > 9) break;
 }
+
+
+/* Generator */
+function* rainbow(){
+    yield 'red';
+    yield 'green';
+    yield 'yellow';
+    yield 'blue';
+} 
+const it = rainbow();
+it.next();
+
+
+/* generator returns iterator, so we can use for...of loop */
+function* rainbow(){
+    yield 'red';
+    yield 'green';
+    yield 'yellow';
+    yield 'blue';
+} 
+for(let color of rainbow()){
+    console.log(color);
+}
+
+
