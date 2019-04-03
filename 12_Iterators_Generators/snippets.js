@@ -21,7 +21,7 @@ while(!current.done){
 /* logging class that attaches timpestamps to messages */
 class Log {
     constructor(){
-        this.messages =[];
+        this.messages = [];
     }
     add(message){
         this.messages.push({ message, timestamp : Date.now() });
@@ -29,4 +29,27 @@ class Log {
 }
 
 
-/*  */
+/* logging class that attaches timpestamps to messages using iterator */
+class Log {
+    constructor(){
+        this.messages = [];
+    }
+    add(message){
+        this.messages.push({ message, timestamp: Date.now() });
+    }
+    // iterator protocol
+    [Symbol.iterator]() {
+        return this.messages.values();
+    }
+}
+
+const log = new Log();
+log.add("A good day to program.");
+log.add("Javascript is the key");
+log.add("Do it now");
+// ...
+
+// iterate over log as if it were array
+for(let entry of log) {
+    console.log(` ${entry.message} @ ${entry.timestamp} `);
+}
