@@ -18,4 +18,15 @@ while(!current.done){
 }
 
 
-/* */
+/* logging class that attaches timpestamps to messages */
+class Log {
+    constructor(){
+        this.messages =[];
+    }
+    add(message){
+        this.messages.push({ message, timestamp : Date.now() });
+    }
+}
+
+
+/*  */
