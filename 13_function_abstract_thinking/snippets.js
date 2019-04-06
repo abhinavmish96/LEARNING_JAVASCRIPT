@@ -24,7 +24,7 @@ if(isCurrentYearLeapYear()) console.log('It is a leap year.');
 
 /* Functions as...Functions */
 
-// Not a pure fucntion
+// Rainbow function - Not a pure fucntion
 const colors = ['red' , 'orange' , 'yellow' , 'green' , 'blue' , 'indigo' , 'violet'];
 let colorIndex = -1;
 function getNextRainbowColor(){
@@ -40,4 +40,14 @@ function isLeapYear(year){
     else return true;
 }
 
-//
+// Rainbow function - A pure fucntion\
+function getRaibowIterator(){
+    const colors = ['red' , 'orange' , 'yellow' , 'green' , 'blue' , 'indigo' , 'violet'];
+    let colorIndex = -1;
+    return {
+        next(){
+            if(++colorIndex >= colors.length) colorIndex = 0;
+            return {value: colors[colorIndex] , done: false};
+        }
+    };
+}
