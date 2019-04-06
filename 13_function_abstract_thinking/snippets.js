@@ -21,3 +21,15 @@ function isCurrentYearLeapYear(){
 }
 const daysInMonth = [31, isCurrentYearLeapYear()?29:28, 31 , 30 , 31 , 30 , 31 , 31 , 30 , 31 , 30 , 31 ];
 if(isCurrentYearLeapYear()) console.log('It is a leap year.');
+
+/* Functions as...Functions */
+
+// Not a pure fucntion
+const colors = ['red' , 'orange' , 'yellow' , 'green' , 'blue' , 'indigo' , 'violet'];
+let colorIndex = -1;
+function getNextRainbowColor(){
+    if(++colorIndex >= colors.length) colorIndex = 0;
+    return colors[colorIndex];
+}
+
+// Example of a pure function
