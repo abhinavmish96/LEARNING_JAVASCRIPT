@@ -83,3 +83,14 @@ for(i = 5; i >= 0 ; i--){
 }
 
 /* Function variable */
+
+// Aliasing the function
+function addThreeSquareAddFiveTakeSquareRoot(){
+    // a sillly long name
+    return Math.sqrt(Math.pow(x+3, 2)+ 5);
+}
+// before
+const answer = (addThreeSquareAddFiveTakeSquareRoot(5) + addThreeSquareAddFiveTakeSquareRoot(2))/addThreeSquareAddFiveTakeSquareRoot(7);
+//after
+const f = addThreeSquareAddFiveTakeSquareRoot;
+const answer = (f(5) + f(2)) / f(7);
