@@ -95,4 +95,27 @@ const answer = (addThreeSquareAddFiveTakeSquareRoot(5) + addThreeSquareAddFiveTa
 const f = addThreeSquareAddFiveTakeSquareRoot;
 const answer = (f(5) + f(2)) / f(7);
 
-/* Functions in as Array */
+/* Functions in an Array */
+// graphic transformation
+const sin = Math.sin;
+const cos = Math.cos;
+const theta = Math.PI/4;
+const zoom = 2;
+const offset = [1, -3];
+
+const pipline = [
+    function rotate(p){
+        return {
+            x: p.x * cos(theta) - p.y * sin(theta),
+            y: p.x * sin(theta) + p.y * cos(theta),
+        };
+    },
+    function scale(p) {
+        return { x: p.x *zoom, y: p.y * zoom};
+    },
+    function translate(p) {
+        return { x: p.x + offset[0], y: p.y + offset[1]};
+    }
+];
+//pipeline is now an array of functions for a specific 2D transform
+// we can transform a point
