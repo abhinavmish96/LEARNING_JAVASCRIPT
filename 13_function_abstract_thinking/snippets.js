@@ -94,3 +94,5 @@ const answer = (addThreeSquareAddFiveTakeSquareRoot(5) + addThreeSquareAddFiveTa
 //after
 const f = addThreeSquareAddFiveTakeSquareRoot;
 const answer = (f(5) + f(2)) / f(7);
+
+/* Functions in as Array */
