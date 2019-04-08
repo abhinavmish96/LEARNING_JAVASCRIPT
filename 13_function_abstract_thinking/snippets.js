@@ -154,3 +154,9 @@ sumOfSquares([1,2,3]);
 sumOfCubes([1,2,3]);
 
 /* Recursion */
+function findNeedle(haystack) {
+    if(haystack.length === 0) return "No haystack here!";
+    if(haystack.shift() === 'needle') return "found it!";
+    return findNeedle(haystack);
+}
+findNeedle(['hay', 'hay', 'hay', 'hay', 'needle', 'hay', 'hay']);
