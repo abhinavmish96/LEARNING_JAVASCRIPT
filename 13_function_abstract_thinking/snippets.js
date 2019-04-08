@@ -119,3 +119,10 @@ const pipline = [
 ];
 //pipeline is now an array of functions for a specific 2D transform
 // we can transform a point
+const p = { x:1, y:1};
+let p2 = p;
+for(let i =0; i<pipeline.length; i++){
+    p2 = pipeline[i](p2);
+}
+// p2 is now p1 rotated 45 degrees (pi/4 radians) around the origin,
+// moved 2 units farther from the origin, and translated 1 unit to the right and 3 units down
