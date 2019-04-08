@@ -137,3 +137,20 @@ function sum(arr, f) {
 sum([1,2,3]); // 6
 sum([1,2,3], x => x*x); // 14
 sum([1,2,3], x => Math.pow(x,3)); // 36
+
+/* Return a Function from a function */
+function sum(arr, f) {
+    //if no function is supplied, use a null function that simply return its argument unmodified
+    if(typeof f != 'function') f = x => x;
+
+    return arr.reduce((a,x)=> a += f(x), 0);
+}
+function newSummer(f){
+    return arr => sum(arr,f)
+}
+const sumOfSquares = newSummer(x => x*x);
+const sumOfCubes = newSummer(x => Math.pow(x,3));
+sumOfSquares([1,2,3]);
+sumOfCubes([1,2,3]);
+
+/* Recursion */
