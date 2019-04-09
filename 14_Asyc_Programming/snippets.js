@@ -57,4 +57,22 @@ fs.readFile(fname, function(err, data){
 });
 
 /* callback hell */
+// callback hell triangle
+const fs = require('fs');
 
+fs.readFile('a.txt', function(err, dataA){
+    if(err) console.log(err);
+    fs.readFile('b.txt', function(err, dataB){
+        if(err) console.log(err);
+        fs.readFile('c.txt', function(err, dataC){
+            if(err) console.log(err);
+            setTimeout(function(){
+                fs.writeFile('d.txt',dataA+dataB+dataC, function(err){
+                    if(err) console.log(err);
+                });
+            }, 60*1000);
+        });
+    });
+});
+
+//try..catch failure
