@@ -47,3 +47,14 @@ function countdown(){
 countdown();
 
 /* Error-first Callbacks */
+// reading the contents of a file in Node
+const fs = require('fs');
+
+const fname = 'may_or_may_not_exist.txt';
+fs.readFile(fname, function(err, data){
+    if(err) return console.log(`error reading file ${fname}: ${err.message}`);
+    console.log(`${fname} contents: ${data}`)
+});
+
+/* callback hell */
+
