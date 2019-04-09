@@ -21,3 +21,16 @@ const intervalId = setInterval(function(){
     if(now.getMinutes() != start.getMinutes() || ++i>10) return clearInterval(intervalId);
     console.log(`${i} : ${now}`);
 }, 5*1000);
+
+/* Scope and Asynchronous function */
+// 5-second countdown result : -1 six
+function countdown(){
+    let i;
+    console.log('Countdown:');
+    for(i = 5; i >= 0; i-- ){
+        setTimeout(function(){
+            console.log(i==0 ? 'Go!' : i);
+        }, (5-i)*1000);
+    }
+}
+countdown();
