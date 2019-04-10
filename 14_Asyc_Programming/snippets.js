@@ -250,4 +250,12 @@ function grun(g){
         }
     })();
 }
-//
+//generator
+function* theFutureIsNow(){
+    const dataA = yield nfcall(fs.readFile, 'a.txt');
+    const dataB = yield nfcall(fs.readFile, 'b.txt');
+    const dataC = yield nfcall(fs.readFile, 'c.txt');
+    yield ptimeout(60*1000);
+    yield nfcall(fs.writeFile, 'd.txt', dataA+dataB+dataC);
+}
+grun(theFutureIsNow);
