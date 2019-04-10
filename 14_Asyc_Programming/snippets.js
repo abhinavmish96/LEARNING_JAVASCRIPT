@@ -109,7 +109,7 @@ countdown(5).then(
     }
 );
 // use of catch with promise stored in the variable
-cosnt p = countdown(5);
+const p = countdown(5);
 p.then(function(){
     console.log("countdowm completed successfully")
 });
