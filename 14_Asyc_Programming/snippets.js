@@ -108,3 +108,11 @@ countdown(5).then(
         console.log("countdowm experinced an error:" + err.message);
     }
 );
+// use of catch with promise stored in the variable
+cosnt p = countdown(5);
+p.then(function(){
+    console.log("countdowm completed successfully")
+});
+p.catch(function(err){
+    console.log("countdowm experinced an error:" + err.message);
+});
