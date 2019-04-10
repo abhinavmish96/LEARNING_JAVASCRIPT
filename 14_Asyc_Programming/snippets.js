@@ -159,3 +159,15 @@ class Countdown extends EventEmitter {
         });
     }
 }
+const c = new Countdown(5);
+c.on('tick', function(i){
+    if(i>0) console.log(i+'...');
+});
+
+c.go()
+    .then(function(){
+        console.log('GO!');
+    })
+    .catch(function(err){
+        console.error(err.message);
+    })
