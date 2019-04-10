@@ -171,7 +171,7 @@ c.go()
     .catch(function(err){
         console.error(err.message);
     })
-
+//
 
 
 /* Promise chaining */
@@ -218,3 +218,14 @@ c.go()
     .catch(function(err){
         console.error(err.message);
     })
+//
+
+/* Generators */
+function nfcall(f,...args){
+    return new Promise(function(resolve, reject){
+        f.call(null,...args,function(err,...args){
+            if(err) return reject(err);
+            resolve(args.length<2 ? args[0]:args);
+        });
+    });
+}
