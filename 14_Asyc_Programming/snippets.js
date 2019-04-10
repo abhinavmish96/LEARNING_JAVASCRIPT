@@ -221,6 +221,7 @@ c.go()
 //
 
 /* Generators */
+// error-first
 function nfcall(f,...args){
     return new Promise(function(resolve, reject){
         f.call(null,...args,function(err,...args){
@@ -229,3 +230,24 @@ function nfcall(f,...args){
         });
     });
 }
+//setTimeout
+function ptimeout(delay){
+    return new Promise(function(resolve, reject){
+        setTimeout(resolve, delay);
+    });
+}
+//generator run
+function grun(g){
+    const it = g();
+    (function iterate(val){
+        const x = it.next(val);
+        if(!x.done){
+            if(x.value instanceof Promise){
+                x.value.then(iterate).catch(err => it.throw(err));
+            } else {
+                settimeout(iterate, 0, x.value);
+            }
+        }
+    })();
+}
+//
