@@ -116,5 +116,9 @@ dates.sort((a,b) => b - a);
 dates.sort((a,b) => a - b);
 
 
-
-
+/* User-friendly relative dates */
+ // using Moment.js
+ moment().subtract(10, 'seconds').fromNow(); // a few secons ago
+ moment().subtract(5, 'minutes').fromNow(); // 5 minutes ago
+ moment().subtract(5, 'hours').fromNow(); // 4 hours ago
+ moment().subtract(22, 'days').fromNow(); // a day ago
