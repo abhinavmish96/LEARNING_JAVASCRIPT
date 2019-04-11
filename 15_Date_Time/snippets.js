@@ -83,3 +83,16 @@ d.getHours(); // 14
 d.getMinutes(); // 59
 d.getSeconds(); // 0
 d.getMilliseconds(); // 0
+
+// there are also UTC equivalent
+d.getUTCFullYear();
+d.getUTCMonth();
+// etc
+
+/* comparing dates */
+const d1 = new Date(1996,2,1);
+const d2 = new Date(2009, 4, 27);
+
+d1 > d2; // false
+d1 < d2; // true
+
