@@ -63,4 +63,10 @@ const d = new Date();
  d.toUTCString(); // "Thu, 11 Apr 2019 08:29:53 GMT"
 
  //using moment.js
- 
+ moment(d).format("YYYY-MM_DD"); // "2019-04-11"
+ moment(d).format("YYYY-MM_DD HH:mm"); // "2019-04-11 14:07"
+ moment(d).format("YYYY-MM_DD HH:mm Z"); // "2019-04-11 14:07 +5:30"
+ moment(d).format("YYYY-MM_DD HH:mm [UTC]Z"); // "2019-04-11 14:07 UTC+5:30"
+
+ moment(d).format("dddd, MMMM [the] Do, YYYY"); // "Thursday, April the 11th, 2019"
+ moment(d).format("h:mm a"); // "2:08 pm"
