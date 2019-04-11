@@ -15,3 +15,10 @@ new Date(2019, 4, 3); // Fri May 03 2019 00:00:00 GMT+0530 (India Standard Time)
 new Date(2019, 10, 30, 11, 30, 30, 33); // Sat Nov 30 2019 11:30:30 GMT+0530 (India Standard Time)
 
 // create date from unix epoch time
+new Date(0);
+
+
+// use negative dates to get dates prior to the unix Epoch
+new Date(-365*24*60*60*1000);
+
+// parsing date string
