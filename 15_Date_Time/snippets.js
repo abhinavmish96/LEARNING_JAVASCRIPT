@@ -22,3 +22,7 @@ new Date(0);
 new Date(-365*24*60*60*1000);
 
 // parsing date string
+new Date('June 14, 1996'); //Fri Jun 14 1996 00:00:00 GMT+0530 (India Standard Time)
+
+new Date('June 14, 1996 GMT-0000') // Fri Jun 14 1996 05:30:00 GMT+0530 (India Standard Time)
+
