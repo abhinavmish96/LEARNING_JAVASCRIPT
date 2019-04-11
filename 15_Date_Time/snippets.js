@@ -34,3 +34,11 @@ const d = new Date(Date.UTC(2019,3,11)); // April 11 UTC
 
 const d = moment.tz([2019, 3, 11, 9, 19], 'America/Los_Angeles').toDate();
 
+/* Transmitting Dates */
+const before = { d: new Date()};
+before.d instanceof Date ;// True
+const json = JSON.stringify(before);
+const after = JSON.parse(json);
+after.d instanceof Date; // false
+typeof after.d //string
+
