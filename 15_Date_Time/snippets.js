@@ -56,6 +56,7 @@ const d = new Date(after.d);
 
 /* Displaying Dates */
 const d = new Date();
+
  d.toLocaleDateString(); // "11/04/2019"
  d.toLocaleFormat();
  d.toLocaleTimeString(); // "13:59:53"
@@ -70,3 +71,15 @@ const d = new Date();
 
  moment(d).format("dddd, MMMM [the] Do, YYYY"); // "Thursday, April the 11th, 2019"
  moment(d).format("h:mm a"); // "2:08 pm"
+
+ /* Date Components */
+ const d = new Date();
+
+d.getFullYear(); // 2019
+d.getMonth(); // 3
+d.getDate(); // 11
+d.getDay();  // 4
+d.getHours(); // 14
+d.getMinutes(); // 59
+d.getSeconds(); // 0
+d.getMilliseconds(); // 0
