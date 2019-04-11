@@ -2,7 +2,7 @@
 
 //All the code snippets to be run in browser console for best results
 
-/* Cocstructing Date Objects */
+/* Constructing Date Objects */
 // all below are interpreted with respect to local time
 new Date(); // current date
 
@@ -25,4 +25,12 @@ new Date(-365*24*60*60*1000);
 new Date('June 14, 1996'); //Fri Jun 14 1996 00:00:00 GMT+0530 (India Standard Time)
 
 new Date('June 14, 1996 GMT-0000') // Fri Jun 14 1996 05:30:00 GMT+0530 (India Standard Time)
+
+/* Constructing dates on server */
+const d = new Date(Date.UTC(2019,3,11)); // April 11 UTC
+
+// Passing an array to Moment.js uses the same parameters as JS's Date Constructor, including zero-based months
+// .toDate() converts back to a JS Date object.
+
+const d = moment.tz([2019, 3, 11, 9, 19], 'America/Los_Angeles').toDate();
 
