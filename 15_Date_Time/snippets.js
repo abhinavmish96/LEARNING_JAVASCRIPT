@@ -53,3 +53,14 @@ const json = JSON.stringify(before);
 const after = JSON.parse(json);
 typeof after.d  // "number"
 const d = new Date(after.d);
+
+/* Displaying Dates */
+const d = new Date();
+ d.toLocaleDateString(); // "11/04/2019"
+ d.toLocaleFormat();
+ d.toLocaleTimeString(); // "13:59:53"
+ d.toTimeString(); // "13:59:53 GMT+0530 (India Standard Time)"
+ d.toUTCString(); // "Thu, 11 Apr 2019 08:29:53 GMT"
+
+ //using moment.js
+ 
