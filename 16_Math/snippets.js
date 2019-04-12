@@ -65,4 +65,14 @@ Math.LOG10E; // the base 10 lograthmic of Math.E: ~0.434
 Math.SQRT1_2 // the square root of 1/2: ~0.707
 Math.SQRT2 // the square root of 2: ~1.414
 
-/*  */
+/* Algebric function */
+
+// Exponentiation
+Math.pow(2, 3); // X^y : 2^3 : 8
+Math.sqrt(16); // 4
+Math.cbrt(27); // 3
+Math.exp(1); // ~2.718
+Math.expm1(1); // ~1.718
+Math.hypot(3,4); // 5
+
+// Lograthmic function
