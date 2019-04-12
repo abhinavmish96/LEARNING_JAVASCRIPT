@@ -101,3 +101,6 @@ Math.sin(Math.PI/4); // ~0.707
 Math.cos(Math.PI); // -1
 Math.tan(0); // 0
 Math.asin(0); // 0
+Math.acos(0); // ~1.57+
+Math.atan(0); // 0
+Math.atan(0, 1); // 0
