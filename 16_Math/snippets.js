@@ -51,4 +51,18 @@ x.toString(16); // "c" (hexadecimal)
 x.toString(8); // "14" (octal)
 x.toString(2); // "1100" (binary)
 
+/* Constants */
+Math.E; // the root of the natural logarith : ~2.718
+Math.PI; // the ratio of a circle circumerence to its diameter: ~3.14
+
+// the lograthmic convenience constants -- these can be accessed through library calls, but they're commonly used enough to warrant conveince constants
+Math.LN2; // the natural lograthmic of 2: ~0.693
+Math.LN10; // the natural lograthmic of 10: ~2.303
+Math.LOG2E; // the base 2 lograthmic of Math.E: ~1.443
+Math.LOG10E; // the base 10 lograthmic of Math.E: ~0.434
+
+//algebric convenience constants
+Math.SQRT1_2 // the square root of 1/2: ~0.707
+Math.SQRT2 // the square root of 2: ~1.414
+
 /*  */
