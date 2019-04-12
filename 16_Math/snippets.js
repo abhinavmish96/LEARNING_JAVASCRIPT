@@ -103,7 +103,7 @@ Math.tan(0); // 0
 Math.asin(0); // 0
 Math.acos(0); // ~1.57+
 Math.atan(0); // 0
-Math.atan(0, 1); // 0
+Math.atan2(0, 1); // 0
 
 // Conversion from degree to radian
 function deg2rad(d) { return d/180*Math.PI; }
@@ -111,3 +111,10 @@ function deg2rad(d) { return d/180*Math.PI; }
 // Conversion from radian to degree
 function rad2deg(d) { return r/Math.PI*180; }
 
+/* Hyperbolic function */
+Math.sinh(0); // 0
+Math.cosh(0); // 1
+Math.tanh(0); // 0
+Math.asinh(0); // 0
+Math.acosh(0); // NaN
+Math.atanh(0); // 0
