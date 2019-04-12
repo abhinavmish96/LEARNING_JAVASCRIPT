@@ -97,3 +97,7 @@ Math.max(4,.5,7.9); // 7.9
 Math.random();
 
 /* Trignometric FUnctions */
+Math.sin(Math.PI/4); // ~0.707
+Math.cos(Math.PI); // -1
+Math.tan(0); // 0
+Math.asin(0); // 0
