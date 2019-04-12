@@ -43,3 +43,12 @@ x.toPrecision(1); // "2e+1"
 
 // o/p is rounded and will always have the specified number of digits of precision
 
+/* Different Bases */
+const x = 12;
+x.toString(); // "12" (base 10)
+x.toString(10); // "12" (base 10)
+x.toString(16); // "c" (hexadecimal)
+x.toString(8); // "14" (octal)
+x.toString(2); // "1100" (binary)
+
+/*  */
