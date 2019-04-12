@@ -104,3 +104,10 @@ Math.asin(0); // 0
 Math.acos(0); // ~1.57+
 Math.atan(0); // 0
 Math.atan(0, 1); // 0
+
+// Conversion from degree to radian
+function deg2rad(d) { return d/180*Math.PI; }
+
+// Conversion from radian to degree
+function rad2deg(d) { return r/Math.PI*180; }
+
