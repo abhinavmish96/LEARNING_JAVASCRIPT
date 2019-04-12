@@ -91,3 +91,9 @@ Math.trunc(7.52); // 7
 Math.round(7.7); // 8
 Math.min(2,5,1); // 1
 Math.max(4,.5,7.9); // 7.9
+
+
+//Pseudornadom number generation
+Math.random();
+
+/* Trignometric FUnctions */
