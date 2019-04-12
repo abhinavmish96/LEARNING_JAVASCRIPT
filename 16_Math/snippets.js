@@ -76,3 +76,8 @@ Math.expm1(1); // ~1.718
 Math.hypot(3,4); // 5
 
 // Lograthmic function
+Math.log(17.5); // ~2.86
+Math.log10(10); // 1
+Math.log2(2); // 1
+Math.log1p(17.5); // ~2.92
+
