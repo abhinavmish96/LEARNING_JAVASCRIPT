@@ -81,3 +81,13 @@ Math.log10(10); // 1
 Math.log2(2); // 1
 Math.log1p(17.5); // ~2.92
 
+// Miscellaneous
+Math.abs(-5.5); // 5.5
+Math.sign(5.6); // 1
+Math.sign(-5.6); // -1
+Math.ceil(2.2); // 3
+Math.floor(-3.2); // -4
+Math.trunc(7.52); // 7
+Math.round(7.7); // 8
+Math.min(2,5,1); // 1
+Math.max(4,.5,7.9); // 7.9
