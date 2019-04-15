@@ -57,3 +57,5 @@ const html = 'HTML with <a href="/one">one link</a>, and some JavaScript.' + '<s
 const match = html.match(/area|a|link|script|soutce/ig); // first attempt
 
 /* Matching HTML */
+const html = '<br> [!CDATA[[<br>]]';
+const matches = html.match(/<br>/ig);
