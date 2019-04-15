@@ -12,3 +12,6 @@
 <!-- <a href="https://twitter.com/abhinavmish96" target="_blank">@abhinavmish96</a> -->
 
 #### Start today! Happy Coding!!
+
+If you have problems, create an issue on this repo. Thanks! :)
+
