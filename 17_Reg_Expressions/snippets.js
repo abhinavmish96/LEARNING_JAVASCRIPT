@@ -68,3 +68,18 @@ const m2 = beer99.match(/[0-9]/g); // better!
 
 // combining ranges
 const match = beer99.match(/[-0-9a-z.]/ig);
+
+// negate character
+const match = beer99.match(/[^\-0-9a-z.]/ig);
+
+// using named character set -- abbreviations
+const stuff = 'high:    9\n' +
+              'medium:  5\n' +
+              'low:     2\n';
+const levels = stuff.match(/:\s*[0-9]/g);
+
+// using \D
+const messyPhone = '(505) 555-1515';
+const neatPhone = messyPhone.replace(/\D/g, '');
+
+//
