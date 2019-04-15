@@ -14,3 +14,10 @@ input.includes("going", 10); // false -- starting at index 10
 input.indexOf("going"); // 9
 input.indexOf("going", 10); // -1
 input.indexOf("nope"); // -1
+
+// to do a case-sensitive comparison, simply convert inpu to lowercase
+input.toLowerCase().startsWith("as");
+
+//find a substring and replace it
+const input = "As I was going to Saint Ivens";
+const output = input.replace("going","walking");
