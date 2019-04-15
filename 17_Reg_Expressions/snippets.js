@@ -25,3 +25,19 @@ const output = input.replace("going","walking");
 /* Constructing Regular Expression */
 const re1 = /going/; // regex that can search for the word "going"
 const re2 = new RegExp("going"); // equivalent object constructor
+
+/* Searching with Regular Expressiojns */
+const input = "As I was going to Saint Ivens";
+const re = /\w{3,}/ig;
+
+//starting with the string (input)
+input.match(re); // ["was", "going", "Saint", "Ivens"]
+input.search(re); // 5 -- the first three letter word starts at index 5
+
+// starting with regex (re)
+re.test(input); // true -- input contains at least one three-letter word
+re.exec(input); // ["was"] -- first match
+re.exec(input); // ["going"] -- exec "remembers" where it is
+re.exec(input); // ["Saint"]
+re.exec(input); // ["Ivens"]
+re.exec(input); // null -- no more matches
