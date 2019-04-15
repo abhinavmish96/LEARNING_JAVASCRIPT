@@ -52,3 +52,8 @@ re.exec(/\w{3,}/ig);
 const input = "As I was going to Saint Ivens";
 const output = input.replace(/\w{4,}/ig, '****'); // "As I was **** to **** ****"
 
+/* Alteration */
+const html = 'HTML with <a href="/one">one link</a>, and some JavaScript.' + '<script src ="stuff.js"></script>';
+const match = html.match(/area|a|link|script|soutce/ig); // first attempt
+
+/* Matching HTML */
