@@ -41,3 +41,10 @@ re.exec(input); // ["going"] -- exec "remembers" where it is
 re.exec(input); // ["Saint"]
 re.exec(input); // ["Ivens"]
 re.exec(input); // null -- no more matches
+
+// note that any of these methods can be used directly with a regex literal
+input.match(/\w{3,}/ig);
+input.search(/\w{3,}/ig);
+re.test(/\w{3,}/ig);
+re.exec(/\w{3,}/ig);
+
