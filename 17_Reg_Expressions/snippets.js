@@ -48,3 +48,7 @@ input.search(/\w{3,}/ig);
 re.test(/\w{3,}/ig);
 re.exec(/\w{3,}/ig);
 
+/* Replacing with Regular Expression */
+const input = "As I was going to Saint Ivens";
+const output = input.replace(/\w{4,}/ig, '****'); // "As I was **** to **** ****"
+
