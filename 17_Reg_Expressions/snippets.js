@@ -21,3 +21,7 @@ input.toLowerCase().startsWith("as");
 //find a substring and replace it
 const input = "As I was going to Saint Ivens";
 const output = input.replace("going","walking");
+
+/* Constructing Regular Expression */
+const re1 = /going/; // regex that can search for the word "going"
+const re2 = new RegExp("going"); // equivalent object constructor
