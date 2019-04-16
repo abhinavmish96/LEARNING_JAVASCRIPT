@@ -87,7 +87,7 @@ const field = '     something';
 const valid = /\S/.test(field);
 
 /* Repetition */
-const berr99 = "99 bottles of beer on the wall " + "take 1 down and pass it around -- " + "98 bottles of beer on the wall.";
+const beer99 = "99 bottles of beer on the wall " + "take 1 down and pass it around -- " + "98 bottles of beer on the wall.";
 const match = beer99.match(/[0-9][0-9][0-9][0-9][0-9][0-9]/);
 const match = beer99.match(/[0-9]+/);
 
@@ -99,3 +99,6 @@ const match = input.match(/\d{5}.*/);
 const equation = "(2 + 3.5) * 7";
 const match = equation.match(/\(\d \+ \d\.\d\) \* \d/);
 
+/* Grouping */
+const text = "Visit oreilly.com today!";
+const match = text.match(/[a-z]+(?:\.com|\.org|\.edu)/i);
