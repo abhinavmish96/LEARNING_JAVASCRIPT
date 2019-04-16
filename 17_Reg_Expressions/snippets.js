@@ -111,3 +111,11 @@ input.replace(/<i>(.*)<\/i>/ig, '<strong>$1</strong>'); // "Regex pros know the 
 //lazy result
 const input = "Regex pros know the difference between\n" + "<i>greedy</i> and <i>lazy</i> matching.";
 input.replace(/<i>(.*?)<\/i>/ig, '<strong>$1</strong>'); //"Regex pros know the difference between <strong>greedy</strong> and <strong>lazy</strong> matching."
+
+
+/* Backreferences */
+const promo = "Opening for XAAX is the dynamic GOOG! At the box office now!";
+const bands = promo.match(/(?:[A-Z])(?:[A-Z])\2\1/g); 
+// usefful one
+const html = `<img alt='A "simlpe" example.>` + `<img alt = "Don't abuse it!">`;
+const matches = html.match(/<img alt=(?:['"]).*?\1/g);
