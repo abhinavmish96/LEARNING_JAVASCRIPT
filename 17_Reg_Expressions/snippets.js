@@ -119,3 +119,18 @@ const bands = promo.match(/(?:[A-Z])(?:[A-Z])\2\1/g);
 // usefful one
 const html = `<img alt='A "simlpe" example.>` + `<img alt = "Don't abuse it!">`;
 const matches = html.match(/<img alt=(?:['"]).*?\1/g);
+
+/* Replacing group */
+let html = '<a class="nope" href="/yep">Yep</a>';
+html = html.replace(/<a .*?(href=".*?").*?>/, '<a $1>');
+
+// preserving both
+let html = '<a class="yep" href="/yep">Yep</a>';
+html = html.replace(/<a .*?(class=".*?").*?(href=".*?").*?>/, '<a $2 $1>');
+
+// $
+const input = "One two three";
+input.replace(/two/, '($`)'); // "One (One ) three"
+input.replace(/\w+/g, '($&)'); // "(One) (two) (three)"
+input.replace(/two/, "($')"); // "One ( three) three"
+input.replace(/two/, "($$)"); // "One ($) three"
