@@ -90,3 +90,12 @@ const valid = /\S/.test(field);
 const berr99 = "99 bottles of beer on the wall " + "take 1 down and pass it around -- " + "98 bottles of beer on the wall.";
 const match = beer99.match(/[0-9][0-9][0-9][0-9][0-9][0-9]/);
 const match = beer99.match(/[0-9]+/);
+
+/* The Peiod Metacharacter and Escaping */
+const input = "Address: 333 Main St., Anywhere, NY, 55532. Phone : 555-555-2525.";
+const match = input.match(/\d{5}.*/);
+
+// to escape any special regex character, simply prefix it with a backslash
+const equation = "(2 + 3.5) * 7";
+const match = equation.match(/\(\d \+ \d\.\d\) \* \d/);
+
