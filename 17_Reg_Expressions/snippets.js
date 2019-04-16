@@ -102,3 +102,12 @@ const match = equation.match(/\(\d \+ \d\.\d\) \* \d/);
 /* Grouping */
 const text = "Visit oreilly.com today!";
 const match = text.match(/[a-z]+(?:\.com|\.org|\.edu)/i);
+
+/* Lazy and Greedy Matches */
+// greedy result
+const input = "Regex pros know the difference between\n" + "<i>greedy</i> and <i>lazy</i> matching.";
+input.replace(/<i>(.*)<\/i>/ig, '<strong>$1</strong>'); // "Regex pros know the difference between <strong>greedy</i> and <i>lazy</strong> matching."
+
+//lazy result
+const input = "Regex pros know the difference between\n" + "<i>greedy</i> and <i>lazy</i> matching.";
+input.replace(/<i>(.*?)<\/i>/ig, '<strong>$1</strong>'); //"Regex pros know the difference between <strong>greedy</strong> and <strong>lazy</strong> matching."
