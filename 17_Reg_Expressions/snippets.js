@@ -202,3 +202,9 @@ inputs.map( s => s.replace(emailMatcher, '<a href="mailto:$&">$&</a>')); // (5)Â
 function validPassword(p){
     return /(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])(?!.*[^a-zA-Z0-9])/.test(p);
 }
+
+/* Constructing Regexes Dynamically */
+const users = ["mary", "nick", "arthur", "sam", "yvette"];
+const text = "Users @arthur started the backup and 15:15, " + "and @nick and @yvette restored it at 18:35";
+const userRegex = new RegExp(`@(?:${users.join('|')})\\b`,'g');
+text.match(userRegex); // (3)Â ["@arthur", "@nick", "@yvette"]
