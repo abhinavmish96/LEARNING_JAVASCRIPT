@@ -173,3 +173,16 @@ html.replace(/<a .*?<\/a>/ig, function(m) {
 
 //direct use
 html.replace(/<a .*?<\/a>/ig, sanitizeATag);
+
+/* Anchoring */
+const input = "It was the best of times, it was the worst of times";
+const beginnig = input.match(/^\w+/g); // ["It"]
+const end = input.match(/\w+$/g); // ["times"]
+const everything = input.match(/^.*$/g); // ["It was the best of times, it was the worst of times"]
+const nomatch1 = input.match(/^best/ig);
+const nomatch2 = input.match(/worst$/ig);
+
+// multiline
+const input = "One line\nTwo lines\nThree lines\nFour";
+const beginnigs = input.match(/^\w+/mg); // (4) ["One", "Two", "Three", "Four"]
+const endings = input.match(/\w+$/mg); // (4) ["line", "lines", "lines", "Four"]
