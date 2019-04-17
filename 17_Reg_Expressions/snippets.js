@@ -134,3 +134,9 @@ input.replace(/two/, '($`)'); // "One (One ) three"
 input.replace(/\w+/g, '($&)'); // "(One) (two) (three)"
 input.replace(/two/, "($')"); // "One ( three) three"
 input.replace(/two/, "($$)"); // "One ($) three"
+
+/*Function replacement */
+const html = `<a class="foo" href="foo" id="foo">Foo</a>\n` + `<A href='/foo' Class="foo">Foo</a>\n` + `<a href="/foo">Foo</a>\n` + `<a onclick="javascript:alert('foo1')" href="/foo">Foo</a>`;
+function sanitizeAtag(aTag) {
+    
+}
