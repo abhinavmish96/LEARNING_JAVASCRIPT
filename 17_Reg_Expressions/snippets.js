@@ -137,7 +137,7 @@ input.replace(/two/, "($$)"); // "One ($) three"
 
 /*Function replacement */
 const html = `<a class="foo" href="foo" id="foo">Foo</a>\n` + `<A href='/foo' Class="foo">Foo</a>\n` + `<a href="/foo">Foo</a>\n` + `<a onclick="javascript:alert('foo1')" href="/foo">Foo</a>`;
-function sanitizeAtag(aTag) {
+function sanitizeATag(aTag) {
     // get the parts of the tag...
     const parts =aTag.match(/<a\s+(.*?)>(.*?)<\/a>/i);
     // parts[1] are the attributes of the opening <a> tag
@@ -166,3 +166,10 @@ html.replace(/<a .*?>(.*?)<\/a>/ig, function(m, g1, offset){
     console.log(`<a> tag found at ${offset}. contents: ${g1}`)
 });
 
+// sanitize func
+html.replace(/<a .*?<\/a>/ig, function(m) {
+    return sanitizeATag(m);
+});
+
+//direct use
+html.replace(/<a .*?<\/a>/ig, sanitizeATag);
