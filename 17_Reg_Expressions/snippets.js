@@ -157,3 +157,12 @@ function sanitizeAtag(aTag) {
      // and the closing tag
      + '</a>';
 }
+
+// to match <a> tags
+html.match(/<a .*?>(.*?)<\/a>/ig);
+
+// replace -- function
+html.replace(/<a .*?>(.*?)<\/a>/ig, function(m, g1, offset){
+    console.log(`<a> tag found at ${offset}. contents: ${g1}`)
+});
+
