@@ -19,3 +19,5 @@ const callouts = document.getElementsByClassName('callout');
 
 // document.getElementByTagName returns a collection of elements that have the given tag name
 const paragraphs = document.getElementsByTagName('p');
+
+/* Querying DOM Elements */
