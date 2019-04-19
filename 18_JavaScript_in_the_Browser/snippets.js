@@ -10,3 +10,12 @@ function printDOM(node, prefix){
     }
 }
 printDOM(document, '');
+
+/* DOM "Get" Methods */
+document.getElementById('content'); // <div id="content">...</div>
+
+// document.getElementByClassName returns a collection of elements that have the given class name
+const callouts = document.getElementsByClassName('callout');
+
+// document.getElementByTagName returns a collection of elements that have the given tag name
+const paragraphs = document.getElementsByTagName('p');
