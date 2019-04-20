@@ -21,3 +21,10 @@ const callouts = document.getElementsByClassName('callout');
 const paragraphs = document.getElementsByTagName('p');
 
 /* Querying DOM Elements */
+document.querySelectorAll('.callout');
+
+document.querySelector('#content div p'); //<p>​This is as fancy as we'll get.​</p>​
+
+
+document.querySelector('#content p'); // <p>​"This is a "<i>​simple​</i>​" HTML file."</p>​
+
