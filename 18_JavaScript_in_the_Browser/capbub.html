@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Event Propogation</title>
+        <meta charset="utf-8"
+    </head>
+    <body>
+        <div>
+            <button>Click Me!</button>
+        </div>
+        <script>
+
+            //this creates an event handler and returns it
+            function logEvent(handlerName, type, cancel, stop, stopImmediate){
+                // this is the actual event handler
+                return function(evt) {
+                    if(cancel) evt.preventDefault();
+                    if(stop) evt.stopPropagation();
+                    if(stopImmediate) evt.stopImmediatePropagation();
+                    console.log(`${type}: ${handlerName}` + (evt.defaultPrevented ? '(canceled)': ''));
+                }
+            }
+            // this adds an event logger to an element
+            function addEventLogger(elt, type, action) {
+                const capture = type === 'capture';
+                elt.addEventListener('click', logEvent(elt.tagName, type, action==='cancel', action==='stop'), capture);
+            }
+
+            const body = document.querySelector('body');
+            const div = document.querySelector('div');
+            const button = document.querySelector('button');
+
+            addEventLogger(body, 'capture');
+            addEventLogger(body, 'bubble');
+            addEventLogger(div, 'capture');
+            addEventLogger(div, 'bubble');
+            addEventLogger(button, 'capture');
+            addEventLogger(button, 'bubble');
+            
+        </script>
+    </body>
+</html>
