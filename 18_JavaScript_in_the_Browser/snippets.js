@@ -76,3 +76,6 @@ function removeParaHighlights(){
 }
 
 /* Data Attributes */
+const highlightAction = document.querySelectorAll('[data-action="highlight"]');
+
+/* Events */
