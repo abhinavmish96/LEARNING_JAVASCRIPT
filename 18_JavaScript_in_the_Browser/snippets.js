@@ -37,3 +37,17 @@ para1.innerHTML; // "This is a <i>simple</i> HTML file."
 para1.textContent = "Modified HTML file"; // "Modified HTML file"
 para1.innerHTML = "<i>Modified</i> HTML file"; // "<i>Modified</i> HTML file"
 
+/* Create New DOM elements */
+const p1 = document.createElement('p');
+const p2 = document.createElement('p');
+p1.textContent = "I was created dynamically!";
+p2.textContent = "Me too";
+
+// to add these newly created elements
+const parent = document.getElementById('content');
+const firstChild = parent.childNodes[0];
+
+parent.insertBefore(p1, firstChild);
+parent.appendChild(p2);
+
+/* Styling Elements */
