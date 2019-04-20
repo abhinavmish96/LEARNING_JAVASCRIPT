@@ -51,3 +51,28 @@ parent.insertBefore(p1, firstChild);
 parent.appendChild(p2);
 
 /* Styling Elements */
+//CSS
+//.highlight { background : #ff0; font-style: italic: }
+
+// add highlight
+function highlightParas(containing) {
+    if(typeof containing === 'string')
+        containing = new RegExp(`\\b${containing}\\b`, 'i');
+    const paras = document.getElementsByTagName('p');
+    console.log(paras);
+    for(let p of paras){
+        if(!containing.test(p.textContent)) continue;
+        p.classList.add('highlight');
+    }
+}
+highlightParas('unique');
+
+// removing highlight
+function removeParaHighlights(){
+    const paras = document.querySelectorAll('p.highlight');
+    for(let p of paras){
+        p.classList.remove('highlight');
+    }
+}
+
+/* Data Attributes */
