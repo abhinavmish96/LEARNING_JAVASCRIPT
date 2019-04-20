@@ -28,3 +28,12 @@ document.querySelector('#content div p'); //<p>​This is as fancy as we'll get.
 
 document.querySelector('#content p'); // <p>​"This is a "<i>​simple​</i>​" HTML file."</p>​
 
+document.querySelector('#content > p'); // <p>​"This is a "<i>​simple​</i>​" HTML file."</p>​
+
+/* Manipulating DOM Elements */
+// innerContent
+const para1 = document.getElementsByTagName('p')[0];para1.textContent; // "This is a simple HTML file."
+para1.innerHTML; // "This is a <i>simple</i> HTML file."
+para1.textContent = "Modified HTML file"; // "Modified HTML file"
+para1.innerHTML = "<i>Modified</i> HTML file"; // "<i>Modified</i> HTML file"
+
