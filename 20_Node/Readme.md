@@ -6,3 +6,4 @@
 
 - **module** is a special object that Node makes available to implement modules
 - Whatever you assign to it **exports property** will be what is *exported* from the module
+- We can import all the modules into our applicaton
