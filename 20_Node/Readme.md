@@ -12,6 +12,7 @@
 
 | Type | String passed to require | Examples |
 |------|:------------------------:|---------:|
-| Core | Doesn't start with /,./, or ../| require('fs')|
+| Core | Doesn't start with /, ./ , or ../ | require('fs')
+require('os')|
 | File | Start with /,./, or ../  ||
 | npm  | Not a core module and doesn't start with /,./, or ../||
