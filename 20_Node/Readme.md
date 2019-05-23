@@ -7,3 +7,11 @@
 - **module** is a special object that Node makes available to implement modules
 - Whatever you assign to it **exports property** will be what is *exported* from the module
 - We can import all the modules into our applicaton
+
+#### There are three types of modules:
+
+| Type | String passed to require | Examples |
+|------|:------------------------:|---------:|
+| Core | Doesn't start with /,./, or ../| require('fs')|
+| File | Start with /,./, or ../  ||
+| npm  | Not a core module and doesn't start with /,./, or ../||
