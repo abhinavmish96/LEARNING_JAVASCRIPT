@@ -34,3 +34,5 @@ $ cd .. # current working dir is home/jdoe
 $ cd node fs/*_program_.js* # creates /home/jdoe/*_program_.js*
 - Node provides a special variable,**__dirname**, which is always set to the directory in which the source file resides
 - **path.join** will join directory elements using whatever directory seperator is appropriate for the operating system, and is generally good for practise
+- We use fs.readFile to read the contents of the file back
+- All of the functions in fs have synchronous equivalent(that end in "Sync"). With the synchronous versions, error handling is accomplished with exceptions, so to make our program robust , we would wrap them in try/catch blocks
