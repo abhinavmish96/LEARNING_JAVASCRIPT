@@ -24,3 +24,13 @@
 - Node only ever imports any given module once(every time a Node app is run)
 
 #### Filesystem access
+
+- To create a file use fs.writeFile, this will create a file in the directory you're currently in when you run node *_program_.js*
+
+For example;
+$ cd /home/jdoe/fs # current working dir is home/jdoe/fs
+$ node write.js # creates /home/jdoe/fs/*_program_.js*
+$ cd .. # current working dir is home/jdoe
+$ cd node fs/*_program_.js* # creates /home/jdoe/*_program_.js*
+- Node provides a special variable,**__dirname**, which is always set to the directory in which the source file resides
+- **path.join** will join directory elements using whatever directory seperator is appropriate for the operating system, and is generally good for practise
