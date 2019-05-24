@@ -17,3 +17,7 @@
 | npm  | Not a core module and doesn't start with /, ./ , or ../ | require('debug')<br>require('express')<br>require('chalk')<br>require('koa')<br>require('q') |
 
 - Core module such as process and buuffer are global are always available, and do not require an explicit *require* statement
+
+#### Customizing modules with function modules
+
+- A module that exports a function that's intended to be invoked immediately
