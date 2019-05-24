@@ -21,3 +21,6 @@
 #### Customizing modules with function modules
 
 - A module that exports a function that's intended to be invoked immediately
+- Node only ever imports any given module once(every time a Node app is run)
+
+#### Filesystem access
