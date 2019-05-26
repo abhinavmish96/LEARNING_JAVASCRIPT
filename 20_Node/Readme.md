@@ -43,4 +43,7 @@ $ cd node fs/*_program_.js* # creates /home/jdoe/*_program_.js*
 
 - Every running Node program has access to a variable called proces that allows it to get information about -- and control -- its own execution
 - Execution can be immediately stopped by calling *process.exit*
-- 
+
+#### Operating System
+
+- os module provides some platform-specific information about the computer on which the app is running.
