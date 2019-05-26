@@ -46,4 +46,4 @@ $ cd node fs/*_program_.js* # creates /home/jdoe/*_program_.js*
 
 #### Operating System
 
-- os module provides some platform-specific information about the computer on which the app is running.
+- OS module provides some platform-specific information about the computer on which the app is running.
