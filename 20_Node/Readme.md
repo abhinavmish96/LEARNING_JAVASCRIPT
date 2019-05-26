@@ -38,3 +38,9 @@ $ cd node fs/*_program_.js* # creates /home/jdoe/*_program_.js*
 - All of the functions in fs have synchronous equivalent(that end in "Sync"). With the synchronous versions, error handling is accomplished with exceptions, so to make our program robust , we would wrap them in try/catch blocks
 - The files in the directory can be listed with fs.readdir
 - The fs module contains many more filesystem functions; you can delete files (**fs.unlink**), move or rename files (**fs.rename**), get information about files and directories (**fs.stat**), and much more. Consult the [Node API Documentation](https://nodejs.org/api/documentation.html) for more info.
+
+#### Process
+
+- Every running Node program has access to a variable called proces that allows it to get information about -- and control -- its own execution
+- Execution can be immediately stopped by calling *process.exit*
+- 
