@@ -47,3 +47,12 @@ $ cd node fs/*_program_.js* # creates /home/jdoe/*_program_.js*
 #### Operating System
 
 - OS module provides some platform-specific information about the computer on which the app is running.
+
+#### Child Processes
+
+- The child_processmodule allows your app to run other programs, whether it be another Node Program, an executable, or a script in another language.
+- The child_process module exposes three primary functions: **exec**, **execFile**, and **fork**.
+- *exec* and *exec_File* can run any executable supported by your operating system.
+- *exec* invokes a shell( Which is what underlies your operating system's command line; if you can run it from the command line, you can run it from exec).
+- *execFile* allows you to execute an executable directly, which offers slightly improved memory and resourse uses, but generally requires greater care.
+- *fork* allows you to execute other Node scripts(which can also be done with exec).
