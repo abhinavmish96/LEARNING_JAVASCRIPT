@@ -1,4 +1,4 @@
-# This Chapter focuses on the JavaScript running on the browser side via the help of NodeJS
+# This Chapter focuses on the different components of NodeJS
 
 ### Here are some of my learnings you might find intersting
 
@@ -56,3 +56,9 @@ $ cd node fs/*_program_.js* # creates /home/jdoe/*_program_.js*
 - *exec* invokes a shell( Which is what underlies your operating system's command line; if you can run it from the command line, you can run it from exec).
 - *execFile* allows you to execute an executable directly, which offers slightly improved memory and resourse uses, but generally requires greater care.
 - *fork* allows you to execute other Node scripts(which can also be done with exec).
+
+#### Streams
+
+- A stream is an object that deals with data as the name implies in a stream(flow). Stream makes sense whenever there is flow of data over time.
+- Streams can be *read streams*, *Write streams*, or both *duplex streams*.
+- File access, too, often uses streams and can also *pipe* streams to one another.
