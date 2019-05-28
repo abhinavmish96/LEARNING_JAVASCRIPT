@@ -63,3 +63,6 @@ $ cd node fs/*_program_.js* # creates /home/jdoe/*_program_.js*
 - Streams can be *read streams*, *Write streams*, or both *duplex streams*.
 - File access, too, often uses streams and can also *pipe* streams to one another.
 - Because data *flows* through streams, it stands to reason that you could take the data coming out of a *read stream* and immediately write it to a *write stream*. This process is called **piping**
+
+#### Web Servers
+
