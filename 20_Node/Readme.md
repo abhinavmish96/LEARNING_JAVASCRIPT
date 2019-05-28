@@ -62,3 +62,4 @@ $ cd node fs/*_program_.js* # creates /home/jdoe/*_program_.js*
 - A stream is an object that deals with data as the name implies in a stream(flow). Stream makes sense whenever there is flow of data over time.
 - Streams can be *read streams*, *Write streams*, or both *duplex streams*.
 - File access, too, often uses streams and can also *pipe* streams to one another.
+- Because data *flows* through streams, it stands to reason that you could take the data coming out of a *read stream* and immediately write it to a *write stream*. This process is called **piping**
