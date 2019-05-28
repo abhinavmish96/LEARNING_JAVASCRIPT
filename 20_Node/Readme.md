@@ -66,3 +66,6 @@ $ cd node fs/*_program_.js* # creates /home/jdoe/*_program_.js*
 
 #### Web Servers
 
+- The **http** module (and its secure counterpart, the *https* module) exposes a *createServer* method that creates a basic web server.
+- To handle incoming requests you can provide a *callback* function
+- To start the server, you simply call its *listen* method and give it a port.
