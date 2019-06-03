@@ -24,4 +24,8 @@
 • Add new methods.
 • Change the configuration of existing properties or methods.
 - **Sealing** an object prevents the addition of new properties, or the reconfiguration or removal of existing properties. Sealing can be used when you have an instance of a class, as methods that operate on the object’s properties will still work (as long as they’re not attempting to reconfigure a property). You can seal an object with Object.seal, and tell if an object is sealed by calling Object.isSealed
-- **Preventing**, the weakest protection, making an object nonextensible, only prevents new properties from being added. Properties can be assigned to, deleted, and reconfig‐ ured
+- **Preventing**, the weakest protection, making an object nonextensible, only prevents new properties from being added. Properties can be assigned to, deleted, and reconfigured
+
+#### Proxies
+
+- New in ES6 are proxies, which provide additional metaprogramming functionality (metaprogramming is the ability for a program to modify itself).
