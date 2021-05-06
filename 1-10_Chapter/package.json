@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.3.3",
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.3.1",
